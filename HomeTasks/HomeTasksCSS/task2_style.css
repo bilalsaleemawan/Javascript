@@ -86,10 +86,12 @@ input[type='text'] {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    margin-top: 8px;
 }
 
 .logo img {
     width: 100px;
+    border-radius: 5px;
 }
 
 .aside-bar {
@@ -121,9 +123,12 @@ input[type='text'] {
     border-radius: 5px;
 }
 
-.aside-bar li a:active {
+.aside-bar a.active {
     background-color: #fff;
+    color: #000;
+    /* Assuming you want to change the text color as well */
 }
+
 
 .aside-bar span i {
     padding: 20px;
@@ -160,6 +165,10 @@ input[type='text'] {
     border-radius: 5px;
     display: none;
 
+}
+
+.dropdown-content span i a.active {
+    color: red;
 }
 
 .dropdown-content span i {
