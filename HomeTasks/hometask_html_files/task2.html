@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/HomeTasks/HomeTasksCSS/task2_style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="menu-icon">
+        <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+        <div class="search-item">
+          <span><i class="fa fa-search" aria-hidden="true"></i></span><input type="text" name="search" id="search"
+            placeholder="Search...">
+        </div>
+      </div>
+
+      <div class="nav-item">
+
+        <div class="settings">
+          <span>
+            <i class="fa fa-bell-o" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="profile-logo">
+          <img src="/assets/images/profile_logo.webp" alt="profile_logo">
+        </div>
+        <div class="dropdown-menu">
+          <button class="btn-dropdown">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <div class="dropdown-content">
+            <ul>
+              <li>
+                <span><i class="fa fa-user" aria-hidden="true"></i></span><a href="#">View Profile</a>
+              </li>
+              <li>
+                <span><i class="fa fa-users" aria-hidden="true"></i></span>
+                <a href="#">Switch Account</a>
+              </li>
+              <li>
+                <span><i class="fa fa-cog" aria-hidden="true"></i></span>
+                <a href="#">Settings</a>
+              </li>
+              <li>
+                <span><i class="fa fa-sign-in" aria-hidden="true"></i>
+                </span>
+                <a id="sign-out" href="#">Logout</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <aside>
+    <div class="aside-bar">
+      <div class="logo">
+        <img src="/assets/images/logo.jpg" alt="logo">
+      </div>
+      <ul>
+        <li><span><i class="fa fa-home" aria-hidden="true"></i></span><a href="#Dashboard">Dashboard</a></li>
+        <li><span><i class="fa fa-user" aria-hidden="true"></i></span><a href="#Profile">Profile</a></li>
+        <li><span><i class="fa fa-bar-chart" aria-hidden="true"></i></span><a href="Leaderboard">Leaderboard</a></li>
+        <li><span><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </span><a href="#Order">Order</a></li>
+        <li><span><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+          </span><a href="#Product">Product</a></li>
+        <li><span><i class="fa fa-line-chart" aria-hidden="true"></i>
+          </span><a href="#Sales Report">Sales Report</a></li>
+        <li><span><i class="fa fa-comment" aria-hidden="true"></i></span><a href="#Message">Message</a></li>
+        <li><span><i class="fa fa-cog" aria-hidden="true"></i>
+          </span><a href="#Settings">Settings</a></li>
+        <li><span><i class="fa fa-star" aria-hidden="true"></i></span><a href="#Favourite">Favourite</a></li>
+        <li><span><i class="fa fa-history" aria-hidden="true"></i></span><a href="#History">History</a></li>
+        <li><span><i class="fa fa-sign-in" aria-hidden="true"></i>
+          </span><a href="#Login">Login</a></li>
+        <li><span><i class="fa fa-sign-out" aria-hidden="true"></i></span><a href="#Sign Up">Sign Up</a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <div class="main-container">
+      <div class="center-content">
+        <h1 id="heading"></h1>
+        <ol id="cities">
+      </div>
+      </ol>
+    </div>
+  </main>
+  <script src="/HomeTasks/hometask_javascript_files/task2.js"></script>
+</body>
+
+</html>

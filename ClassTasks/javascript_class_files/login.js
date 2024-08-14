@@ -1,5 +1,5 @@
 if (localStorage.getItem('username') !== null) {
-    window.location.href = '/ClassTasks/html_class_files/arry.html';
+    window.location.href = '/HomeTasks/hometask_html_files/task2.html';
 }
 const userName = document.getElementById('username');
 
@@ -24,7 +24,7 @@ form.addEventListener('submit', (event) => {
 
         localStorage.setItem('username', userName.value);
         // console.log("Login Success");
-        window.location.href = '/ClassTasks/html_class_files/arry.html';
+        window.location.href = '/HomeTasks/hometask_html_files/task2.html';
     } else {
         // alert ("Login Fail");
 
