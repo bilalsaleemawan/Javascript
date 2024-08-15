@@ -5,4 +5,4 @@ const products = {
 const productName = document.getElementById('product-name');
 productName.innerHTML = products.name;
 const productPrice = document.getElementById('product-price');
-productPrice.innerHTML = products.price;
+productPrice.innerHTML = `RS ${products.price}`;
