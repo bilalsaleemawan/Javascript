@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    text-justify: center;
 }
 
 body {
@@ -24,7 +25,7 @@ main .main-container {
 .sub-container {
     display: flex;
     background-color: #FFFFFF;
-    width: 50%;
+    width: 52%;
     height: 60%;
     border-radius: 5px;
 }
@@ -35,7 +36,7 @@ main .main-container {
     height: 40%;
     background-color: #ABE62B;
     z-index: 2;
-    left: 243px;
+    left: 235px;
     top: 190px;
     border-radius: 5px;
 }
@@ -84,4 +85,32 @@ main .main-container {
     align-items: center;
     margin-left: 205px;
     margin-top: 13px;
+}
+#color-heading{
+    color: gray;
+    font-size: bold;
+}
+.prodt-item {
+    display: flex;
+    list-style-type: none;
+    gap: 21px;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+}
+#proDescription{
+    color: gray;
+    font-size: bold;
+    margin-top: 10px;
+}
+.apple-benefits{
+    margin-left: 12px;
+}
+.btn{
+    margin: 20px;
+    background-color: #FF3F40;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
 }
