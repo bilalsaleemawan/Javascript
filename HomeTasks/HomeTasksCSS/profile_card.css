@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #F1F1C6;
+}
+
+.profile-card {
+    position: relative;
+    width: 35%;
+    height: 97%;
+    background-color: #ffff;
+    border-radius: 5%;
+}
+
+.card-header1 {
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    border-radius: 5%;
+    background-color: #A2345C;
+    z-index: 1;
+}
+
+
+.card-header1 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+    /* width: 400px;
+    height: 200px;
+    border-radius: 50%; */
+}
+
+
+
+
+
+/* .card-header2 {
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    border-radius: 5%;
+    z-index: 2;
+}
+
+
+.card-header2 img {
+    width: 402px;
+    border-radius: 50%;
+}
+
+
+
+.card-header3 {
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    border-radius: 5%;
+    z-index: 3;
+}
+
+
+.card-header3 img {
+    width: 402px;
+    border-radius: 50%;
+}
+
+
+
+ */
+
+
+
+.card-header1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-items {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 20px;
+
+}
+
+.social-icons a i {
+    padding: 7px;
+    font-size: 22px;
+}
+
+
+.social-icons a i:hover {
+    background-color: #e7008a;
+    border-radius: 10%;
+    color: #ffff;
+}
+
+.fa-facebook,
+.fa-linkedin,
+.fa-x-twitter,
+.fa-square-instagram,
+.fa-dribbble {
+    color: black;
+}
+
+.profile-name {
+    margin-top: 230px;
+    margin-bottom: 34px;
+}
+
+.profile-name h6 {
+    text-align: center;
+    margin-top: 5px;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.profile-description {
+    text-align: justify;
+    line-height: 1.5;
+    width: 300px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 30px;
+}
+
+
+.btn1 button {
+    background-color: #e7008a;
+    /* Twitter blue */
+    color: white;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.btn2 button {
+    background-color: #ffff;
+    color: lightgray;
+    padding: 10px 50px;
+    border: 1px solid lightgray;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+.btn1 button:hover,
+.btn2 button:hover {
+    font-size: 10px;
+}

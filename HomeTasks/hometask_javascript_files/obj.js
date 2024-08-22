@@ -1,7 +1,19 @@
+
+
+// Products Object
+
 const products = {
     name: 'Delicious Apples',
     price: 7.93
 }
+// Product Cart Object
+const productName = document.getElementById('product-name');
+productName.innerHTML = products.name;
+const productPrice = document.getElementById('product-price');
+productPrice.innerHTML = `RS ${products.price}`;
+
+
+
 const chooseColor = {
     color1: 'Green',
     color2: 'Yellow',
@@ -9,10 +21,7 @@ const chooseColor = {
     color4: 'Red'
 }
 
-const productName = document.getElementById('product-name');
-productName.innerHTML = products.name;
-const productPrice = document.getElementById('product-price');
-productPrice.innerHTML = `RS ${products.price}`;
+
 
 const colorHeading = document.getElementById('color-heading');
 colorHeading.innerHTML = "SELECT A COLOR";
