@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+/* First Task Pseudo-class and pseudo elements and Hover*/
+
+table {
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+caption{
+   font-weight: bold;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+/* nth-child For Even Row background-color */
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+/* nth-child For odd Row background-color */
+tr:nth-child(odd) {
+    background-color: lightgoldenrodyellow;
+}
+
+/* nth-last-child For Even Row background-color */
+tr:nth-last-child(1) {
+    background-color: lightgreen
+}
+/* Hover */
+td:hover {
+    color: lightslategray;
+}
+
+/* Pseudo Element After */
+caption::after{
+    content: " ✔";
+    color: green;
+}
+
+/* /* Pseudo Element Before */
+caption::before{
+content: " 👨‍🎓 ";
+}
+
