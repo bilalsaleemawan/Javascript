@@ -7,7 +7,9 @@
     <title>Events</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/HomeTasks/HomeTasksCSS/task4_events.css">
 </head>
 
@@ -28,7 +30,7 @@
                         <td>1</td>
                         <td>John Doe</td>
                         <td>+1-202-555-0156</td>
-                        <td>johndoe@example.com</td>
+                        <td class="emailCell">johndoe@example.com</td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -50,13 +52,22 @@
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>David Wilson</td>
+                        <td class="nameCell">David Wilson</td>
                         <td>+1-606-555-0147</td>
                         <td>david.wilson@example.com</td>
                     </tr>
                 </tbody>
                 </thead>
             </table>
+
+            <div class="sub-container">
+                <div class="container-item">
+                    <h3 id="numResult1">0</h3>
+                    <button id="btn-one">Generate</button>
+                    <h3 id="numResult2"></h3>
+                    <input id="numberGenerator" type="text">
+                </div>
+            </div>
         </div>
     </div>
     <script src="/HomeTasks/hometask_javascript_files/task4_events.js"></script>

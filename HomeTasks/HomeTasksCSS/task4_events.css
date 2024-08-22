@@ -4,16 +4,34 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
+.main-container{
+    /* position: relative; */
+}
+
+.sub-container{
+
+   
+ 
+}
+
+
+
+
+
+
+
 
 /* First Task Pseudo-class and pseudo elements and Hover*/
 
 table {
     border-collapse: collapse;
     margin: 10px;
+    /* position:absolute;
+    left: 200px; */
 }
 
-caption{
-   font-weight: bold;
+caption {
+    font-weight: bold;
 }
 
 th,
@@ -33,21 +51,38 @@ tr:nth-child(odd) {
 
 /* nth-last-child For Even Row background-color */
 tr:nth-last-child(1) {
-    background-color: lightgreen
+    background-color: lightgreen;
 }
+
 /* Hover */
 td:hover {
     color: lightslategray;
 }
 
 /* Pseudo Element After */
-caption::after{
+caption::after {
     content: " ✔";
     color: green;
 }
 
 /* /* Pseudo Element Before */
-caption::before{
-content: " 👨‍🎓 ";
+caption::before {
+    content: " 👨‍🎓 ";
 }
 
+/* First-Letter  EmailCell*/
+.emailCell::first-letter {
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+/* First-Line NameCell */
+.nameCell::first-line {
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+
+#numberGenerator{
+    margin-top:20px ;
+}
