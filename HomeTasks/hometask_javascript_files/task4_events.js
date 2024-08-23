@@ -23,3 +23,19 @@ function getRandomColor() {
     }
     return color;
 }
+
+
+function colorizeCharacters(text) {
+    let coloredText = '';
+    for (let i = 0; i < text.length; i++) {
+        const color = getRandomColor();
+        coloredText += '<span style="color:' + color + '">' + text[i] + '</span>';
+    }
+    return coloredText;
+}
+
+document.getElementById('numberGenerator').addEventListener('input', function() {
+    const inputText = this.value;
+    const result = colorizeCharacters(inputText);
+    document.getElementById('numResult2').innerHTML = result;
+});
