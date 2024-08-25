@@ -7,7 +7,7 @@ const users = [
         address: [
             {
                 city: 'Rawalpindi',
-                street: '1',
+                street: '2',
             }
         ],
         phoneNumber: '+92-300-1234567',
