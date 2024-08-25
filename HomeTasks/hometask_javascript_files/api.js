@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 employeeLocation.innerHTML = member.company
                     ? `<span style="font-weight:bold;">Location:</span> ${member.company}`
                     : '<span style="font-weight:bold;">Location:</span> Not Provided';
-                    employeeOccupation.innerHTML = member.role
+                employeeOccupation.innerHTML = member.role
                     ? `<span style="font-weight:bold;">&nbsp;Occupation:</span> ${member.role}`
                     : `<span style="font-weight:bold;">&nbsp;Occupation:</span> Not Provided`;
-                
+
                 employeeAboutMe.innerHTML = member.description
                     ? `<span style="font-weight:bold;">About Me:</span> ${member.description}`
                     : '<span style="font-weight:bold;">About Me:</span> Not Provided';
