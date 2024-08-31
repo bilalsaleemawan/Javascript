@@ -1,48 +1,57 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Selecting the HTML elements
-    const employeeName = document.getElementById('name');
-    const employeeImage = document.getElementById('profileImage');
-    const employeeEmail = document.getElementById('email');
-    const employeeLocation = document.getElementById('location');
-    const employeeOccupation = document.getElementById('occupation');
-    const employeeAboutMe = document.getElementById('about-me');
-    // Fetching data from the API
-    fetch('https://opencollective.com/webpack/members.json?limit=10&offset=0')
-        .then(response => response.json()) // Parsing the JSON data
-        .then(data => {
-            let index = 0; // Initialize index to keep track of the current member
+document.addEventListener("DOMContentLoaded", function () {
+  // Selecting the container where all cards will be appended
+  const employeeContainer = document.querySelector(".main-container");
 
-            // Function to update the content based on the current index
-            function updateContent() {
-                const member = data[index];
+  // Fetching data from the API
+  fetch("https://opencollective.com/webpack/members.json?limit=10&offset=0")
+    .then((response) => response.json()) // Parsing the JSON data
+    .then((data) => {
+      // Iterate over each member in the data
+      data.forEach((member) => {
+        // Create the employee-info div
+        const employeeInfoDiv = document.createElement("div");
+        employeeInfoDiv.classList.add("sub-container"); // Applying the class name for styling
 
-                // Update HTML elements with the fetched data
-                employeeName.textContent = member.name || 'Name: Not Provided';
-                employeeImage.src = member.image || ''; // Set image source
-                employeeEmail.innerHTML = member.email
-                    ? `<span style="font-weight:bold;">Email:</span> ${member.email}`
-                    : '<span style="font-weight:bold;">Email:</span> Not Provided';
-                employeeLocation.innerHTML = member.company
-                    ? `<span style="font-weight:bold;">Location:</span> ${member.company}`
-                    : '<span style="font-weight:bold;">Location:</span> Not Provided';
-                employeeOccupation.innerHTML = member.role
-                    ? `<span style="font-weight:bold;">&nbsp;Occupation:</span> ${member.role}`
-                    : `<span style="font-weight:bold;">&nbsp;Occupation:</span> Not Provided`;
+        // Set the innerHTML with the provided HTML structure and replace placeholders
+        employeeInfoDiv.innerHTML = `
+                     <div class="back-image">
+                       <img src="/assets/images/api_image.png" alt="back-image">
+                    </div>
+                    <div class="profile-image">
+                         <img id="profileImage" src="${
+                           member.image || "/path/to/default/profile.png"
+                         }" alt="Profile Image">
+                    </div>
+                    <div id="employee-info">
+                     <h3 id="name">${member.name || "Name: Not Provided"}</h3>
+                        <p id="email">${
+                          member.email
+                            ? `<span style="font-weight:bold;">Email:</span> ${member.email}`
+                            : '<span style="font-weight:bold;">Email:</span> Not Provided'
+                        }</p>
+                        <p id="location">${
+                          member.company
+                            ? `<span style="font-weight:bold;">Location:</span> ${member.company}`
+                            : '<span style="font-weight:bold;">Location:</span> Not Provided'
+                        }</p>
+                        <p id="occupation">${
+                          member.role
+                            ? `<span style="font-weight:bold;">&nbsp;Occupation:</span> ${member.role}`
+                            : `<span style="font-weight:bold;">&nbsp;Occupation:</span> Not Provided`
+                        }</p>
+                        <p id="about-me">${
+                          member.description
+                            ? `<span style="font-weight:bold;">About Me:</span> ${member.description}`
+                            : '<span style="font-weight:bold;">About Me:</span> Not Provided'
+                        }</p>
+                    </div>
+                `;
 
-                employeeAboutMe.innerHTML = member.description
-                    ? `<span style="font-weight:bold;">About Me:</span> ${member.description}`
-                    : '<span style="font-weight:bold;">About Me:</span> Not Provided';
-
-
-                // Increment the index, and reset to 0 if it exceeds the length of the array
-                index = (index + 1) % data.length;
-            }
-
-            // Update the content immediately, then continue every 3 seconds
-            updateContent();
-            setInterval(updateContent, 3000); // Change the content every 3 seconds
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
+        // Append the newly created employeeInfoDiv to the main container
+        employeeContainer.appendChild(employeeInfoDiv);
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
 });

@@ -7,11 +7,21 @@
 }
 
 .main-container {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #D8A400; */
+
+  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   background-color: #D8A400;
+
+
 }
 
 .back-image {
@@ -24,6 +34,8 @@
 }
 
 .sub-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
   position: relative;
   width: 500px;
   height: 250px;
