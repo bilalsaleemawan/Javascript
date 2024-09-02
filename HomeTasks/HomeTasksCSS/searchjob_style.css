@@ -41,11 +41,12 @@
 .job-cards{
   background-color: #ffff;
   width: 250px;
-  height: 120px;
+  height: 140px;
   border-radius: 5px;
   padding: 10px;
 }
 
+/* logo and title wrapper */
 .wrapper{
   display: flex;
   gap: 10px;
@@ -82,8 +83,20 @@ padding: 5px;
     height: 30px;
   }
 
+  .fa-wallet{
+    color: pink;
+  }
+.salary{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
 
-
+.salary h6{
+  margin-top: 5px;
+  font-size: 13px;
+}
 
 }
 
