@@ -24,170 +24,187 @@
     margin-bottom: 10px;
   }
 
-/* sub-container */
-.sub-container{
-  background-color:#f4f0f5 ;
-  height: 100%;
-  width: 100%;
-  border-radius: 5px;
-  padding: 10px;
-}
-.result-heading{
-  display: flex;
-  justify-content: space-between;
-}
+  /* sub-container */
+  .sub-container {
+    background-color: #f4f0f5;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+  }
 
-/* Job-cards */
-.job-cards{
-  background-color: #ffff;
-  width: 250px;
-  height: 140px;
-  border-radius: 5px;
-  padding: 10px;
-}
+  .result-heading {
+    display: flex;
+    justify-content: space-between;
+  }
 
-/* logo and title wrapper */
-.wrapper{
-  display: flex;
-  gap: 10px;
-}
+  /* Job-cards */
+  .job-cards {
+    background-color: #ffff;
+    width: 250px;
+    height: 140px;
+    border-radius: 5px;
+    padding: 10px;
+  }
 
-/* job-tags */
+  /* logo and title wrapper */
+  .wrapper {
+    display: flex;
+    gap: 10px;
+  }
 
-.job-title h6{
-font-weight: bold;
-}
-.job-tags{
-display: flex;
-gap: 5px;
-}
+  /* job-tags */
 
-.job-tags span{
-  background-color:#f4f0f5;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 11px;
-}
+  .job-title h6 {
+    font-weight: bold;
+  }
+
+  .job-tags {
+    display: flex;
+    gap: 5px;
+  }
+
+  .job-tags span {
+    background-color: #f4f0f5;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 11px;
+  }
 
   /*logo container */
-  .logo{
-    background-color:#d2d2d2 ;
+  .logo {
+    background-color: #d2d2d2;
     width: 49px;
     height: 40px;
     border-radius: 5px;
-padding: 5px;
+    padding: 5px;
   }
 
-  .logo img{
+  .logo img {
     width: 40px;
     height: 30px;
   }
 
-  .fa-wallet{
+  .fa-wallet {
     color: pink;
   }
-.salary{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-}
 
-.salary h6{
-  margin-top: 5px;
-  font-size: 13px;
-}
-
-}
-
-  
-
-  
-   
-
-  #job-img {
-    width: 90px;
-    height: 90px;
-    border-radius: 5%;
-  }
-
-
-
-  .section-search .input-group {
+  .salary {
     display: flex;
     align-items: center;
-    background-color: #f4f0f5;
-    width: 450px;
-    height: 80px;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    justify-content: space-between;
   }
 
-  .input-group input[type="text"] {
-    width: 100px;
+  .salary h6 {
+    font-size: 13px;
   }
 
-  .fa-location-dot {
-    margin-right: 12px;
+  .items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
-  .fa-chevron-down {
-    margin-left: 5px;
+  .items h6 {
+    margin-top: 5px;
   }
 
-  .search-btn {
-    background-color: #ff5fa3;
-    color: #fff;
-    /* White text for better contrast */
-    border: none;
-    /* Remove the default border */
-    padding: 10px 20px;
-    /* Adjust padding as needed */
-    border-radius: 5px;
-    /* Add rounded corners */
-    cursor: pointer;
-    /* Change cursor to a hand when hovering */
-    margin: 10px;
+  .salary p {
+    margin-top: 14px;
+    font-size: 12px;
+    color: gray;
   }
 
-  .icon-container {
-    position: relative;
-  }
+}
 
-  .icon-container i {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #333;
-  }
 
-  .drop-down-btn {
-    background-color: #f4f0f5;
-  }
 
-  .drop-down-btn i {
-    position: absolute;
-    left: -1px;
-    top: 50%;
-    transform: translateY (-50%);
-    color: #333;
-  }
 
-  #search-icon {
-    padding-left: 40px;
-    /* Adjust padding to make room for the icon */
-    width: 170px;
-  }
 
-  #search-city {
-    padding-left: 40px;
-    /* Adjust padding to make room for the icon */
-    width: 150px;
-  }
 
-  .fa-chevron-down {
-    margin-left: -25px;
-  }
+#job-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 5%;
+}
+
+
+
+.section-search .input-group {
+  display: flex;
+  align-items: center;
+  background-color: #f4f0f5;
+  width: 450px;
+  height: 80px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.input-group input[type="text"] {
+  width: 100px;
+}
+
+.fa-location-dot {
+  margin-right: 12px;
+}
+
+.fa-chevron-down {
+  margin-left: 5px;
+}
+
+.search-btn {
+  background-color: #ff5fa3;
+  color: #fff;
+  /* White text for better contrast */
+  border: none;
+  /* Remove the default border */
+  padding: 10px 20px;
+  /* Adjust padding as needed */
+  border-radius: 5px;
+  /* Add rounded corners */
+  cursor: pointer;
+  /* Change cursor to a hand when hovering */
+  margin: 10px;
+}
+
+.icon-container {
+  position: relative;
+}
+
+.icon-container i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+}
+
+.drop-down-btn {
+  background-color: #f4f0f5;
+}
+
+.drop-down-btn i {
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  transform: translateY (-50%);
+  color: #333;
+}
+
+#search-icon {
+  padding-left: 40px;
+  /* Adjust padding to make room for the icon */
+  width: 170px;
+}
+
+#search-city {
+  padding-left: 40px;
+  /* Adjust padding to make room for the icon */
+  width: 150px;
+}
+
+.fa-chevron-down {
+  margin-left: -25px;
+}
 }
