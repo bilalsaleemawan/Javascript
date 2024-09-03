@@ -102,16 +102,9 @@ function createJobCard(job) {
     // Display filtered jobs
     filteredJobs.forEach(createJobCard);
     
-    const resultHeading = document.querySelector(".result-heading p"); // Select the <p> element within .result-heading
-    // Update the result text
-    function updateResultHeading(filteredJobsLength) {
-        resultHeading.textContent = `${filteredJobsLength} Result(s) Found`;
-    }
-    
-    // Example usage
-    const filteredJobsLength = 5; // This would be dynamically determined based on your logic
-    updateResultHeading(filteredJobsLength);
-    
+  
+    // Update the result heading
+    resultHeading.textContent = `${filteredJobs.length} Result(s) Found`;
   }
 
 // Add event listener to the search button
