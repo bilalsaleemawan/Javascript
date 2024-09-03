@@ -1,6 +1,8 @@
 // Selecting elements
 const subContainer = document.querySelector(".sub-container");
 const searchButton = document.querySelector(".search-btn");
+const jobTitleInput = document.getElementById("search-icon"); // Cache element
+const cityInput = document.getElementById("search-city"); // Cache element
 
 // Sample job data
 const jobsData = [
@@ -11,7 +13,7 @@ const jobsData = [
     tags: ["Fullstack", "Angular", "Azure", "C#"],
     salary: "$13k/month",
     postedTime: "0 minutes ago",
-    location: "San Francisco"
+    location: "Karachi" // Single city location
   },
   {
     logo: "/assets/images/amazon-icon.svg",
@@ -20,7 +22,7 @@ const jobsData = [
     tags: ["React", "JavaScript", "AWS", "CSS"],
     salary: "$12k/month",
     postedTime: "10 minutes ago",
-    location: "Seattle"
+    location: "Lahore" // Single city location
   },
   {
     logo: "/assets/images/microsoft-logo-svgrepo-com.svg",
@@ -29,7 +31,7 @@ const jobsData = [
     tags: ["Docker", "Kubernetes", "Azure", "CI/CD"],
     salary: "$15k/month",
     postedTime: "30 minutes ago",
-    location: "Redmond"
+    location: "Islamabad" // Single city location
   },
   {
     logo: "/assets/images/apple-logo-svgrepo-com.svg",
@@ -38,7 +40,7 @@ const jobsData = [
     tags: ["Swift", "iOS", "Xcode", "Objective-C"],
     salary: "$14k/month",
     postedTime: "1 hour ago",
-    location: "Cupertino"
+    location: "Rawalpindi" // Single city location
   }
   // Add more job objects as needed
 ];
@@ -74,29 +76,49 @@ function createJobCard(job) {
   }
 
   function displayFilteredJobs() {
-    const jobTitleInput = document.getElementById("search-icon"); // Cache element
-    const cityInput = document.getElementById("search-city"); // Cache element
-    const resultHeading = document.querySelector(".result-heading p"); // Cache element
-  
     // Clear previous results
     subContainer.innerHTML = '';
   
     // Filter jobs based on user input
     const filteredJobs = jobsData.filter(job => {
-      const titleMatch = job.title.toLowerCase().includes(jobTitleInput.value.toLowerCase());
-      const locationMatch = job.location.toLowerCase().includes(cityInput.value.toLowerCase());
-      const tagMatch = job.tags.some(tag => tag.toLowerCase().includes(jobTitleInput.value.toLowerCase()));
+      // Convert job title, location, and tags to lowercase
+      const jobTitleLower = job.title.toLowerCase();
+      const jobLocationLower = job.location.toLowerCase();
+      const jobTagsLower = job.tags.map(tag => tag.toLowerCase());
+    
+      // Convert user inputs to lowercase
+      const userTitleInput = jobTitleInput.value.toLowerCase();
+      const userLocationInput = cityInput.value.toLowerCase();
+    
+      // Check for matches
+      const titleMatch = jobTitleLower.includes(userTitleInput);
+      const locationMatch = jobLocationLower.includes(userLocationInput);
+      const tagMatch = jobTagsLower.some(tag => tag.includes(userTitleInput));
     
       // Return true if the title or tags match and the location matches
       return (titleMatch || tagMatch) && locationMatch;
     });
-  
+    
     // Display filtered jobs
     filteredJobs.forEach(createJobCard);
-  
-    // Update the result heading
-    resultHeading.textContent = `${filteredJobs.length} Result(s) Found`;
+    
+    const resultHeading = document.querySelector(".result-heading p"); // Select the <p> element within .result-heading
+    // Update the result text
+    function updateResultHeading(filteredJobsLength) {
+        resultHeading.textContent = `${filteredJobsLength} Result(s) Found`;
+    }
+    
+    // Example usage
+    const filteredJobsLength = 5; // This would be dynamically determined based on your logic
+    updateResultHeading(filteredJobsLength);
+    
   }
 
 // Add event listener to the search button
 searchButton.addEventListener("click", displayFilteredJobs);
+
+// Clear input fields on page load
+window.onload = () => {
+  jobTitleInput.value = '';
+  cityInput.value = '';
+};
